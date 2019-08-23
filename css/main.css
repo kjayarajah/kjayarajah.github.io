@@ -1,0 +1,136 @@
+html,body 
+{
+    font-family: verdana;
+	width:1000px;
+}
+
+html{
+	margin:auto;
+}
+
+
+.navigation {
+	font-family: arial;
+    font-size: 0.75em;
+    font-weight:bold;
+    padding:10px;
+    color:white;
+    z-index:1;
+    background-color:black; 
+    text-align:right;
+}
+
+.navigation a{
+    text-decoration:none;  
+    color:white;
+}
+
+.navigation a:visited{
+	color:white;
+}
+
+.navigation a:hover{
+	color:yellow;
+}
+
+
+div.header { position: relative; 
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+div.header img { z-index: 1; 
+}
+
+div.header div {
+        position: absolute;
+        right:0%;
+        padding: 3px;
+        height: 20px;
+        line-height: 16px;
+        text-align: right;
+        overflow: hidden;
+      }
+
+div.header div.blackbg {
+        z-index: 2;
+        background-color: #000;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+        filter: alpha(opacity=50);
+        opacity: 0.7;
+      }
+
+div.header div.label {
+z-index: 3;
+color: white;
+}
+
+
+div.tiles {
+box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+padding:5px;
+font-family: verdana;
+color:#2D69A7;
+}
+
+div.tiles p{
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+color:#4c4b4b;
+font-size:smaller;
+text-align:justify;
+}
+
+div.tiles table{
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+color:#4c4b4b;
+font-size:smaller;
+}
+
+div.tiles table tr{
+padding-bottom:10px;
+}
+
+div.tiles table tr td{
+padding-left:10px;
+text-align:center;
+}
+
+div.tiles table tr td.news{
+padding-left:10px;
+text-align:left;
+}
+
+div.tiles ul li{
+padding-left:15px;
+padding-right:15px;
+padding-bottom:15px;
+color:#4c4b4b;
+font-size:smaller;
+}
+
+div.tiles a{
+    text-decoration:none;
+}
+
+
+h1{
+	font-size:medium;
+	padding:15px;
+}
+
+div.footer p{
+padding-left:15px;
+padding-right:15px;
+padding-bottom:5px;
+color:#4c4b4b;
+font-size:smaller;
+text-align:center;
+}
+
+div.clustrmaps-map-container{
+width:60px;
+height:40px;
+}
