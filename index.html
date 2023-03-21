@@ -1,297 +1,671 @@
-
-
-
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>
-	Kasthuri Jayarajah
-</title>
-	
-	<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-
-</head>
-<body>
-    <div class="navigation">
-        <a href="index.html#news">HOME</a>&nbsp | &nbsp<a href="index.html#news">NEWS</a>&nbsp | &nbsp<a href="index.html#projects">PROJECTS</a>&nbsp | &nbsp<a href="index.html#pubs">PUBLICATIONS</a>&nbsp | &nbsp<a href="index.html#services">SERVICES</a>&nbsp| &nbsp<a href="index.html#affiliations">AFFILIATIONS</a>&nbsp
-    </div>
-
-    <div id="news" class="tiles" style="height:700px">
+<html>
+    
+    <head>
+        <meta charset="utf-8"/>
+        <title>[ Kasthuri Jayarajah @ UMBC ]</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         
-        <div style="float:left;width:20%;height:450px">
-        	<img src="./images/KASTHURI.jpg" WIDTH=100% style="margin-top:70px"></img>
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+        
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+         <script src="js/html5shiv.js"></script>
+         <script src="js/respond.min.js"></script>
+         <![endif]-->
+        
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- http://getbootstrap.com/customize/ change "@screen-sm" -> "@screen-md" in @grid-float-breakpoint -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menucollapse.js"></script>
+        <script type="text/javascript" src="js/arrow78.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+    </head>
+    
+    <body id="page-top" class="index">
+        
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"  data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                    <button id="button2" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <span><a href="#"><img border="0" width="170" src="images/UMBC-logo.png"/></a></span>
+                </div>
+                
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Home<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="javascript:reset_menus();$('#tab-intro-content').show();" href="#intro">Introduction</a></li>
+                                <li><a href="bio.html">Biography</a></li>
+                                <li><a href="cv.html">CV (Web)</a></li>
+                                <li><a target="_blank" href="zeinalipour.pdf">CV (PDF)</a></li>
+                            </ul>
+                        </li> -->
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-news-content').show();" href="#home">Home</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-news-content').show();" href="#news">News</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Publications<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="javascript:reset_menus();$('#tab-publications-content').show();" href="#publications">Selected</a></li>
+                                <li><a href="https://scholar.google.com.sg/citations?user=ArOh3LwAAAAJ&hl=en">All</a></li>
+                            </ul>
+                        </li>
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-awards-content').show();" href="#awards">Awards</a>
+                        </li>
+                        <!-- <li class="page-scroll">
+                            <a href="talks/">Talks</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-courses-content').show();" href="#courses">Courses</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-systems-content').show();" href="#systems">Systems</a>
+                        </li> -->
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-service-content').show();" href="#service">Service</a>
+                        </li>
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-advising-content').show();" href="#advising">Advising</a>
+                        </li>
+                        
+                        <!-- <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#tab-contact-content').show();" href="#contact">Contact</a>
+                        </li> -->
+                        <li class="page-scroll">
+                            <a onclick="javascript:reset_menus();$('#bs-example-navbar-collapse-2').toggle();">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+                
+                <!-- search box submenu -->
+                <div class="collapse" id="bs-example-navbar-collapse-2">
+                    <gcse:search></gcse:search>
+                        </div>
+                
+            </div><!-- /.container-fluid -->
+        </nav>
+        
+        <section>
+            <!-- Place this tag where you want the search results to render -->
+            <gcse:searchresults-only></gcse:searchresults-only>
+                </section>
+        
+        <!-- Home Section -->
+        <section  name="home" id="home" style="margin-top:40px">
+            <div class="container">
+                <div align="left" class="col-md-3">
+                    <a target="_blank" href="images/KASTHURI.jpg">
+                        <img id="mobile-img" src="images/KASTHURI.jpg" width="200" border="0" height="250" alt=""></a>
+                </div>
+                <div align="left" class="col-md-4">
+                    <h2>Kasthuri Jayarajah
+                        <!-- <h5><i>PhD, U. of California - Riverside, USA, 2005</i></h5> -->
+                    </h2>
+                    
+                    <h4>Research Assistant Professor<br>
+                        <a href="https://cards.umbc.edu">The Center for Real-time Distributed Sensing and Autonomy (CARDS)</a><br>
+                        <!-- <a href="https://www.umbc.edu/">University of Maryland, Baltimore County</a><br> -->
+                        <!--
+                         P.O. Box 20537<br>
+                         1678 Nicosia, CYPRUS<br>-->
+                        <!-- Tel/Fax: <a href="tel:0035722892755">+357-22892755</a> / <a href="tel:0035722892701">01</a><br/>
+                        Email: -->
+                        <script language="JavaScript">
+                            <!--
+                            document.write("&nbsp;");
+                            spiderjam('kasthuri','umbc.edu');
+                            -->
+                            </script><br/>
+                        <!-- Lab: <a target="_blank" href="https://dmsl.cs.ucy.ac.cy/">http://dmsl.cs.ucy.ac.cy/</a><br>
+                        Directions: <a target="_blank" href="https://goo.gl/FQCHMl">http://goo.gl/FQCHMl</a> -->
+                    </h4>
+                    <h4><b>Research Areas</b><br><i>Mobile and Ubiquitous Computing<br>Artificial Intelligence of Things<br>Human-Autonomy Teaming</i> <br><br>
+                        <!-- <a href="#intro" onclick="javascript:reset_menus();$('#tab-intro-content').show();" class="btn-primary btn-xs">Recent Events</a><br></h4> -->
+                        <p><a href="./docs/CV_public.pdf" class="btn-sm btn-primary">CV</a>
+                        <a href="./docs/research_statement_kasthuri_jayarajah.pdf" class="btn-sm btn-primary">Research Statement</a></p>
+                        <!-- <a href="zeinalipour.pdf" class="btn-sm btn-primary">CV (PDF)&raquo;</a></p> -->
+                    
+                </div>
+                
+                <i class="twittertop" style="display:none;" id="t1">
+                    <!-- <div id="news" tyle="text-align: left"  class="col-md-5">&nbsp; -->
+                        <div id="news" tyle="text-align: left"  class="col-md-5">
+            <h2>NEWS</h2>
+                <div style="overflow-y: scroll; height:200px">
+                    <table style="padding:2px;">
+                <tr style="height:4em"><td style="padding:4px;">12/2022</td><td class="news">Our paper "AirDrop: Towards Collaborative, Multi-Resolution Air–Ground Teaming for Terrain-Aware Navigation" was accepted at ACM HotMobile'23!</td></tr>
+                <tr style="height:4em"><td style="padding:4px;">08/2022</td><td class="news">Our vision for <a href="https://arxiv.org/pdf/2208.05410.pdf">highly interactive, attention-sharing human-drone teams</a> will be presented at SmartWear co-located with ACM MobiCom'22!</td></tr>
+                <tr style="height:4em"><td style="padding:4px;">05/2022</td><td class="news">Happy to mentor the MRC-ARL Summer Student Team Research on <a href="https://cpb-us-e1.wpmucdn.com/blog.umd.edu/dist/d/961/files/2021/06/ARLSummerResearchExperienceFlyer2022-1.pdf">"Air-deploying Legged Robots"</a> along with Sean Gart (ARL), at UMBC this summer!</td></tr>
+                <tr style="height:4em"><td style="padding:4px;">12/2021</td><td class="news">Our work on retrofitting vision DNNs to enable lightweight collaborative intelligence has been accepted to IEEE INFOCOM'22!</td></tr>
+                <tr style="height:4em"><td style="padding:4px;">11/2021</td><td class="news">I've joined UMBC as a research faculty.</td></tr>
+                <tr style="height:4em"><td style="padding:4px;">10/2021</td><td class="news">I'll be serving on the MobiSys'22 Program Committee. Please consider submitting your work (Deadline 20th Dec)!</td></tr>
+                <tr style="height:4em"><td>02/2021</td><td class="news">I'll be speaking at the Voices of Data Science conference organized by UMass, Amherst. Join us <a href="https://live.remo.co/e/voices-of-data-science-2021-day--2/register">here!</a></td></tr>
+                <tr style="height:4em"><td>01/2021</td><td class="news">I'll be serving as a Student Volunteer Co-Chair for UbiComp'21 and Web Co-Chair for MobiSys'21!</td></tr>
+                        <tr style="height:4em"><td>12/2020</td><td class="news">Our paper titled "The Role of Group Cohesiveness in Targeted Mobile Promotions" has been accepted to the <b><a href="https://www.journals.elsevier.com/journal-of-business-research">Journal of Business Research</a></b> (Special Issue on Mobile Applications)!</td></tr>
+                <tr style="height:4em"><td>10/2020</td><td class="news">I've been selected to participate in the <a href="https://www2.eecs.berkeley.edu/risingstars/2020/participants/jayarajah.shtml"><b>EECS Rising Stars</b></a> Early Career Workshop, hosted by UCBerkely, this year!</td></tr>
+                    <tr style="height:4em"><td>07/2020</td><td class="news">I'm teaching COR1305 Spreadsheet Modeling and Analytics (formerly, Computer as an Analysis Tool) this Fall!</td></tr>
+                    <tr style="height:4em"><td>01/2020</td><td class="news">I'll be on leave till 06/20 (baby on the way!).</td></tr>
+                        <tr style="height:4em"><td>12/2019</td><td class="news">Our paper titled ""Five Challenges in Cloud-Enabled Intelligence and Control" was accepted to the ACM Trans. on Internet Technology.</td></tr>
+                        <tr style="height:4em"><td>09/2019</td><td class="news">I was named a Finalist for the Gaetano Borrielo Outstanding Student Award at UbiComp'19.</td></tr>
+                        <tr style="height:4em"><td>06/2019</td><td class="news">Our paper titled "Inferring Accurate Bus Trajectories from Noisy Estimated Arrival Time Records" was accepted to IEEE ITSC 2019.</td></tr>
+                        <tr style="height:4em"><td>05/2019</td><td class="news">Our paper titled "Resilient Collaborative Intelligence for Adversarial IoT Environments" was accepted to FUSION 2019.</td></tr>
+                        <tr style="height:4em"><td>02/2019</td><td class="news">Our paper titled "BuSCOPE : Fusing Individual & Aggregated Mobility Behaviorfor "Live" Smart City Services" was accepted to MobiSys 2019.</td></tr>
+                        <tr style="height:4em"><td>10/2018</td><td class="news">Our paper titled "Predicting Episodes of Non-Conformant Mobility in Indoor Environments" was accepted to IMWUT, Vol.2, Issue 4, 2018.</td></tr>
+                        <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "Exploiting the Interdependency of Land Use and Mobility for Urban Planning" was accepted to the 7th International Workshop on Pervasive Urban Applications (PURBA), co-located with UbiComp'18.</td></tr>
+                        <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "The Role of Urban Mobility on Retail Business Survival" was accepted to IMWUT, Vol.2, Issue 3, 2018.</td></tr>
+                        <tr style="height:4em"><td>07/2018</td><td class="news">I've been awarded the SMU Multidisciplinary Doctoral Fellowship for the academic year 2018-2019.</td></tr>
+                        <tr style="height:4em"><td>10/2017</td><td class="news">We are one of the top 5 teams in the <a href="http://cikm2017.org/CIKM_AnalytiCup_details.html">DataSpark Open Task Mobility Challenge Finals of the CIKM AnalytiCup </a>!.</td></tr>
+                        <tr style="height:4em"><td>08/2017</td><td class="news"><a href="http://www.talks.cam.ac.uk/talk/index/74571">Invited to talk</a> at the Computer Laboratory of the University of Cambridge on the topic of "Understanding Urban Events with CrowdSourced Data".</td></tr>
+                        
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Won the <b><a href="https://www.womentechmakers.com/scholars">Google Women Techmakers Scholarship</a></b>.</td></tr>
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Attending the <a href="https://www.turing.ac.uk/events/urban-analytics-data-dive/">Urban Analytics Data Dive</a> at the Alan Turing Institute in London.</td></tr>
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Our working paper titled "Role of Group Cohesiveness in Consumers' Responses to Mobile Promotions" was accepted to the Association of Consumer Research Conference, 2017.</td></tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">Our proposal on leveraging multi-modal sensors for city-scale event detection is through to the Semi Finals at the <b><a href="http://www.cikm2017.org/CIKM_AnalytiCup_task2.html">CIKM AnalytiCup 2017 - Mobility Challenge</a></b>!</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">I've been invited to the TPC of the ACM S3 Workshop. <a href="http://mnslab.org/s3/">Consider submitting!</a></td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">I'm spending this Summer at the Computer Laboratory in University of Cambridge.</td>
+                        </tr>
+                        <tr style="height:4em"><td>08/2016</td><td class="news">I'm spending this Fall at CMU's Human-Computer Interaction Institute.</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Can Instagram Posts Help Characterize Urban Micro-Events?" was accepted to FUSION 2016.</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Fusing WiFi and Video Sensing for Accurate Group Detection in Indoor Spaces" was accepted to the 3rd Intl' Workshop on Physical Analytics (co-located with MobiSys 2016).</td>
+                        </tr>
+                        <tr style="height:4em"><td>03/2016</td><td class="news">Our paper titled "LiveLabs: Building In-Situ Mobile Sensing & Behavioural Experimentation TestBeds" was accepted to MobiSys 2016.</td>
+                        </tr>
+                        <tr style="height:4em"><td>03/2016</td><td class="news">We are organizing the first ever <a href="http://www.sigmobile.org/mobisys/2016/workshops/women/">Women's Workshop</a> at MobiSys'16!</td>
+                        </tr>
 
-        	<br>
-	    <p><a href="./docs/research_statement_kasthuri_jayarajah.pdf">Research Statement</a> | <a href="./docs/CV_public.pdf">CV</a></p>
-        	<!-- <p>  </p> -->
+                    </table>
+            <!-- </div> -->
+                        <!-- <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065" data-width="900"
+                            data-height="300">Tweets
+                            by @dmslucy</a>
+                        <script>!function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = p + "://platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");</script></center> -->
+                    </div>
+                </i>
+                
+                <!--<p><a href="#" class="btn btn-primary">More &raquo;</a></p>-->
+                <b class="expandshow" style="display:none;" id="tab-1">
+                    <button class="btn btn-primary btn-lg btn-block" style="width: 100%;" onclick="javascript:$('.allshow').show();$('.noshow').hide();$('.collapseshow').show();$('.expandshow').hide();">EXPAND ALL SECTIONS <span class="glyphicon glyphicon-chevron-down"></span></button>
+                </b>
+                <b class="collapseshow" style="display:none;" id="tab-1">
+                    <button class="btn btn-primary btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('.allshow').hide();$('.noshow').show();$('.expandshow').show();$('.collapseshow').hide();">COLLAPSE ALL SECTIONS <span class="glyphicon glyphicon-chevron-up"></span></button>
+                </b>
+                
+            </div>
+        </section>
+        
+        <!-- Home Section -->
+        <section name="intro" id="intro">
+            <div class="container lead">
+                <div style="text-align: left; margin-top:10px" class="col-md-12">
+                    <!--<h2>Welcome!</h2>-->
+                    
+                    <b class="noshow" style="display:none;" id="tab-1">
+                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-intro-content').toggle();">Introduction <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    </b>
+                    
+                    <div class="allshow" style="display:none;" id="tab-intro-content">
+                        <hr class="star-primary">
 
-            <!-- <p></p> -->
-            <p>Contact me at: <a href="maito:kasthuri@umbc.edu">kasthuri@umbc.edu</a>.</p>
-	    
-        	
-        </div>
-
-        <div style="float:left;width:40%;height:700px">
-        	<h1>Hi, I'm Kasthuri Jayarajah.</h1>
-
-            <p>I'm a Research Assistant Professor at the University of Maryland Baltimore County, affiliated with the <a href="https://cards.umbc.edu">Center for Real-time Distributed Sensing and Autonomy (CARDS)</a>. My core research interests lie in the areas of mobile and ubiquitous sensing, deep learning for IoT and the edge, mobility-driven urban analytics and predictive cyber-physical systems.</p> 
-
-<p>In my most recent work, I’m exploring the concept of "Collaborative AI-based sense-making" for resource-limited edge devices (e.g., cameras) where groups of sensors, due to their proximity and shared perspectives of the sensed environment, can cooperate for performance benefits. Previously, I explored the use of localization technology in improving the operations of built environments, both at the indoor-scale and city scale. I have worked on a variety of predictive urban applications (e.g., predicting non-conformant behavior, mobility-on-demand simulations/public transportation, consumer marketing and retail survivability), building on both social and behavioral insights derived from individual and group mobility.</p>
-
-
-<p>Before joining UMBC, I was a Research Fellow and Adjunct Faculty at the Singapore Management University (SMU) where I completed my doctoral research advised by Prof. Archan Misra (SMU). Previously, I was advised by Prof. Cecilia Mascolo at the Computer Laboratory, University of Cambridge (Summer 2017) and by Jenniffer Mankoff and Anind Dey during my exchange at the Carnegie Mellon University, in Fall 2016. My PhD research was generously supported by the <a href="https://www.a-star.edu.sg/Scholarships/For-Graduate-Studies/A-STAR-Graduate-Scholarship-Singapore">A*Star Graduate Scholarship</a> and the Google Women Techmakers Scholarship (APAC).</p>
-            <!-- <p>I received my Masters degree in Computing from the National University of Singapore, in 2013, and Bachelor of Engineering degree from the University of Moratuwa, Sri Lanka, in 2010. Prior to joining the PhD programme, I was a Research Engineer at the Living Analytics Research Center at SMU. My current research focuses on understanding human behavior through the fusion of physical and social analytics.
-            </p>
- -->
-			           
-        </div>
-
-        <div style="float:left;width:40%;height:700px">
-        	<h1>NEWS</h1>
-            <div style="overflow-y: scroll; height:550px">
-	            <table>
-			<tr style="height:4em"><td>12/2022</td><td class="news">Our paper "AirDrop: Towards Collaborative, Multi-Resolution Air–Ground Teaming for Terrain-Aware Navigation" was accepted at ACM HotMobile'23!</td></tr>
-			<tr style="height:4em"><td>08/2022</td><td class="news">Our vision for <a href="https://arxiv.org/pdf/2208.05410.pdf">highly interactive, attention-sharing human-drone teams</a> will be presented at SmartWear co-located with ACM MobiCom'22!</td></tr>
-			<tr style="height:4em"><td>05/2022</td><td class="news">Happy to mentor the MRC-ARL Summer Student Team Research on <a href="https://cpb-us-e1.wpmucdn.com/blog.umd.edu/dist/d/961/files/2021/06/ARLSummerResearchExperienceFlyer2022-1.pdf">"Air-deploying Legged Robots"</a> along with Sean Gart (ARL), at UMBC this summer!</td></tr>
-			<tr style="height:4em"><td>12/2021</td><td class="news">Our work on retrofitting vision DNNs to enable lightweight collaborative intelligence has been accepted to IEEE INFOCOM'22!</td></tr>
-			<tr style="height:4em"><td>11/2021</td><td class="news">I've joined UMBC as a research faculty.</td></tr>
-			<tr style="height:4em"><td>10/2021</td><td class="news">I'll be serving on the MobiSys'22 Program Committee. Please consider submitting your work (Deadline 20th Dec)!</td></tr>
-			<tr style="height:4em"><td>02/2021</td><td class="news">I'll be speaking at the Voices of Data Science conference organized by UMass, Amherst. Join us <a href="https://live.remo.co/e/voices-of-data-science-2021-day--2/register">here!</a></td></tr>
-			<tr style="height:4em"><td>01/2021</td><td class="news">I'll be serving as a Student Volunteer Co-Chair for UbiComp'21 and Web Co-Chair for MobiSys'21!</td></tr>
-	                <tr style="height:4em"><td>12/2020</td><td class="news">Our paper titled "The Role of Group Cohesiveness in Targeted Mobile Promotions" has been accepted to the <b><a href="https://www.journals.elsevier.com/journal-of-business-research">Journal of Business Research</a></b> (Special Issue on Mobile Applications)!</td></tr>
-			<tr style="height:4em"><td>10/2020</td><td class="news">I've been selected to participate in the <a href="https://www2.eecs.berkeley.edu/risingstars/2020/participants/jayarajah.shtml"><b>EECS Rising Stars</b></a> Early Career Workshop, hosted by UCBerkely, this year!</td></tr>
-	        	<tr style="height:4em"><td>07/2020</td><td class="news">I'm teaching COR1305 Spreadsheet Modeling and Analytics (formerly, Computer as an Analysis Tool) this Fall!</td></tr>
-	        	<tr style="height:4em"><td>01/2020</td><td class="news">I'll be on leave till 06/20 (baby on the way!).</td></tr>
-	                <tr style="height:4em"><td>12/2019</td><td class="news">Our paper titled ""Five Challenges in Cloud-Enabled Intelligence and Control" was accepted to the ACM Trans. on Internet Technology.</td></tr>
-	                <tr style="height:4em"><td>09/2019</td><td class="news">I was named a Finalist for the Gaetano Borrielo Outstanding Student Award at UbiComp'19.</td></tr>
-	                <tr style="height:4em"><td>06/2019</td><td class="news">Our paper titled "Inferring Accurate Bus Trajectories from Noisy Estimated Arrival Time Records" was accepted to IEEE ITSC 2019.</td></tr>
-	                <tr style="height:4em"><td>05/2019</td><td class="news">Our paper titled "Resilient Collaborative Intelligence for Adversarial IoT Environments" was accepted to FUSION 2019.</td></tr>
-	                <tr style="height:4em"><td>02/2019</td><td class="news">Our paper titled "BuSCOPE : Fusing Individual & Aggregated Mobility Behaviorfor "Live" Smart City Services" was accepted to MobiSys 2019.</td></tr>
-	                <tr style="height:4em"><td>10/2018</td><td class="news">Our paper titled "Predicting Episodes of Non-Conformant Mobility in Indoor Environments" was accepted to IMWUT, Vol.2, Issue 4, 2018.</td></tr>
-	                <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "Exploiting the Interdependency of Land Use and Mobility for Urban Planning" was accepted to the 7th International Workshop on Pervasive Urban Applications (PURBA), co-located with UbiComp'18.</td></tr>
-	                <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "The Role of Urban Mobility on Retail Business Survival" was accepted to IMWUT, Vol.2, Issue 3, 2018.</td></tr>
-	                <tr style="height:4em"><td>07/2018</td><td class="news">I've been awarded the SMU Multidisciplinary Doctoral Fellowship for the academic year 2018-2019.</td></tr>
-	                <tr style="height:4em"><td>10/2017</td><td class="news">We are one of the top 5 teams in the <a href="http://cikm2017.org/CIKM_AnalytiCup_details.html">DataSpark Open Task Mobility Challenge Finals of the CIKM AnalytiCup </a>!.</td></tr>
-	                <tr style="height:4em"><td>08/2017</td><td class="news"><a href="http://www.talks.cam.ac.uk/talk/index/74571">Invited to talk</a> at the Computer Laboratory of the University of Cambridge on the topic of "Understanding Urban Events with CrowdSourced Data".</td></tr>
-	                
-	                <tr style="height:4em"><td>07/2017</td><td class="news">Won the <b><a href="https://www.womentechmakers.com/scholars">Google Women Techmakers Scholarship</a></b>.</td></tr>
-	                <tr style="height:4em"><td>07/2017</td><td class="news">Attending the <a href="https://www.turing.ac.uk/events/urban-analytics-data-dive/">Urban Analytics Data Dive</a> at the Alan Turing Institute in London.</td></tr>
-	                <tr style="height:4em"><td>07/2017</td><td class="news">Our working paper titled "Role of Group Cohesiveness in Consumers' Responses to Mobile Promotions" was accepted to the Association of Consumer Research Conference, 2017.</td></tr>
-	                <tr style="height:4em"><td>05/2017</td><td class="news">Our proposal on leveraging multi-modal sensors for city-scale event detection is through to the Semi Finals at the <b><a href="http://www.cikm2017.org/CIKM_AnalytiCup_task2.html">CIKM AnalytiCup 2017 - Mobility Challenge</a></b>!</td>
-	                </tr>
-	                <tr style="height:4em"><td>05/2017</td><td class="news">I've been invited to the TPC of the ACM S3 Workshop. <a href="http://mnslab.org/s3/">Consider submitting!</a></td>
-	                </tr>
-	                <tr style="height:4em"><td>05/2017</td><td class="news">I'm spending this Summer at the Computer Laboratory in University of Cambridge.</td>
-	                </tr>
-	                <tr style="height:4em"><td>08/2016</td><td class="news">I'm spending this Fall at CMU's Human-Computer Interaction Institute.</td>
-	                </tr>
-	                <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Can Instagram Posts Help Characterize Urban Micro-Events?" was accepted to FUSION 2016.</td>
-	                </tr>
-	                <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Fusing WiFi and Video Sensing for Accurate Group Detection in Indoor Spaces" was accepted to the 3rd Intl' Workshop on Physical Analytics (co-located with MobiSys 2016).</td>
-	                </tr>
-	                <tr style="height:4em"><td>03/2016</td><td class="news">Our paper titled "LiveLabs: Building In-Situ Mobile Sensing & Behavioural Experimentation TestBeds" was accepted to MobiSys 2016.</td>
-	                </tr>
-	                <tr style="height:4em"><td>03/2016</td><td class="news">We are organizing the first ever <a href="http://www.sigmobile.org/mobisys/2016/workshops/women/">Women's Workshop</a> at MobiSys'16!</td>
-	                </tr>
-
-	            </table>
-	        </div>
-
-    	</div>
-
-        <div style="clear:both">
-        </div>
-    </div>
-
-    <div id="projects" class="tiles" style="display:200px">
-        <h1>ONGOING PROJECTS</h1>
-	    
-	    <div class="row">
-		  <div class="column" >
-			  <center>
-		    <b>Human-Autonomy Teaming</b>
-			  <iframe src="https://drive.google.com/file/d/1XqcmB_s1D37IxTjzOeb8lODZzkuPBsSg/preview" width="400" height="225" frameBorder="0" allow="autoplay"></iframe>
-			  </center>
-		  </div>
-		  <div class="column" >
-			  <center>
-		    <b>Collaborative Perception</b>
-			  <iframe src="https://drive.google.com/file/d/1vTTAjNtVlmOjJtO4VU2AFc8OSM6fjTw9/preview" width="400" height="225" frameBorder="0" allow="autoplay"></iframe>
-			  </center>
-		  </div>
-		</div>
-    </div>
-
-    <div id="pubs" class="tiles">
-        <h1>SELECTED PUBLICATIONS</h1>
-
-        <p>For a complete list of publications, visit <a href="https://scholar.google.com.sg/citations?user=M9PpSboAAAAJ&hl=en">here</a>.</p>
-
-        <ul>
-		
-		<li><b>Kasthuri Jayarajah</b>, Sean Gart, Aryya Gangopadhyay, "AirDrop: Towards Collaborative, Multi-Resolution Air–Ground Teaming for Terrain-Aware Navigation", To be presented at ACM HotMobile'23.</li>
-		<li><b>Kasthuri Jayarajah</b>, Aryya Gangopadhyay, Nicholas Waytowich, "TagTeam: Towards Wearable-Assisted, Implicit Guidance for Human–Drone Teams", SmartWear Workshop co-located with ACM MobiCom'22. <a href="https://arxiv.org/pdf/2208.05410.pdf">Preprint</a></li>
-		<li><b>Kasthuri Jayarajah</b>, Dhanuja Wanniarachchige, Tarek Abdelzaher, Archan Misra, "ComAI: Enabling Lightweight Collaborative Intelligence by Retrofitting Vision DNNs", IEEE INFOCOM 2022.</li>
-	 <li>Reetika Gupta, Sourjo Mukherjee, <b>Kasthuri Jayarajah</b>, "The Role of Group Cohesiveness in Targeted Mobile Promotions",Journal of Business Research, Volume 127, April 2021, Pages 216-227. <a href="https://www.sciencedirect.com/science/article/pii/S0148296321000382?dgcid=author">PDF</a></li>
-             <li>Tarek Abdelzaher, Yifan Hao, <b>Kasthuri Jayarajah</b>, Archan Misra, Per Skarin, Shuochao Yao, Dulanga Weerakoon, Karl-Erik Årzen, "Five Challenges in Cloud-Enabled Intelligence and Control," Trans. on Internet Technology, Vol. 3, Issue 1, February 2020.</li>
-            <li>L. Meegahapola, T. Kandappu, <strong>K. Jayarajah</strong>, L. Akoglu, S. Xiang and A. Misra. BuSCOPE : Fusing Individual & Aggregated Mobility Behaviorfor "Live" Smart City Services, ACM MobiSys 2019.&nbsp;<a href="https://dl.acm.org/authorize?N680927">PDF</a></li>
-            <li><strong>K. Jayarajah</strong> and A. Misra. Predicting Episodes of Non-Conformant Mobility in Indoor Environments, PACM IMWUT, Volume 2, Issue 4, Dec 2018. To be presented at UbiComp'19.&nbsp;<a href="https://dl.acm.org/authorize?N680928">PDF</a></li>
-            <li>K. D'Silva, <strong>K. Jayarajah (co-primary)</strong>, A. Tassos, A. Misra, and C. Mascolo. The Role of Urban Mobility on Retail Business Survival, PACM IMWUT, Volume 2, Issue 3, 2018. Presented at UbiComp'18.&nbsp;<a href="https://dl.acm.org/authorize?N669563">PDF</a></li>
-            <li><strong>Jayarajah, K.</strong>, A. Tan, and A. Misra. Exploiting the Interdependency of Land Use and Mobility for Urban Planning, 7th International Workshop on Pervasive Urban Applications (PURBA), UbiComp'18 Adjunct Proceedings.&nbsp;<a href="https://cpemis.eng.cmu.ac.th/~santi/purba2018/papers/purba-008.pdf">PDF</a>&nbsp;<b style="color:white;background-color:green;font-size:small">&nbsp;Best Paper&nbsp;</b></li>
-            <li><strong>Jayarajah, K.</strong>, V. Subbaraju, A. Athaide,  L. Meegahapola and A. Misra. Can multimodal sensing detect and localize transient events?, SPIE Defense+Security 2018.</li>
-           <li>Gupta, R., S. Mukherjee and <strong>K. Jayarajah</strong>. Role of Group Cohesiveness in Consumers' Responses to Mobile Promotions [Working Paper], Association For Consumer Research Conference North America Advances (2017).</li>
-            <li><strong>Jayarajah, K.</strong>, V. Subbaraju, D. Weerakoon, A. Misra, L. T. Tam and N. Athaide. Discovering anomalous events from urban informatics data, SPIE Defense+Security 2017.</li>
-            <li><strong>Jayarajah, K.</strong> and A. Misra. Can Instagram Posts Help Characterize Urban Micro-Events?, The 19th International Conference on Information Fusion (FUSION 2016).</li>
-            <li><strong>Jayarajah, K.</strong>, Z. Lantra and A. Misra. Fusing WiFi and Video Sensing for Accurate Group Detection in Indoor Spaces, Third Intl' Workshop on Physical Analytics (co-located with ACM MobiSys 2016).&nbsp;<a href="http://dl.acm.org/authorize?N19612">PDF</a></li>
-            <li><strong>Jayarajah, K.</strong>, R. K. Balan., M. Radhakrishnan, A. Misra and Y. Lee. LiveLabs: Enabling In-Situ
-Behavioural Experiments, ACM MobiSys 2016.&nbsp;<a href="http://dl.acm.org/authorize?N19613">PDF</a></li>
-            <li>Misra, A., Z. Lantra and <strong>K. Jayarajah</strong>. Ontology-aided Feature Correlation for Multi-Modal Urban
-Sensing, SPIE Defense+Security 2016.</li>
-            <li>Dai, B. T., <strong>K. Jayarajah</strong>, E. P. Lim, A. Misra, S. Nayak. A Study on Singapore Haze. 1st
-International Workshop on Understanding Situations Through Multimodal Sensing (co-located with
-ICDCN), 2016.&nbsp;<a href="http://dl.acm.org/authorize?N19625">PDF</a></li>
-            <li><strong>Jayarajah, K.</strong>, S. Yao, R. Mutharaju, A. Misra, G. De Mel, J. Skipper, T. Abdelzaher, M. Kolodny.
-Social Signal Processing for Real-Time Situational Understanding: A Vision and Approach. SocialSens
-Workshop co-located with IEEE MASS, 2015.</li>
-            <li><strong>Jayarajah, K.</strong>, Y. Lee, A. Misra, R. K. Balan. Need Accurate User Behavior? Pay Attention to
-            Groups!, ACM Ubicomp 2015.&nbsp;<a href="http://dl.acm.org/authorize?N19614">PDF</a></li>
-            <li><strong>Jayarajah, K.</strong>, M. Radhakrishnan, C. S. Hoi, A. Misra. Candy Crushing Your Sleep, 4th Workshop
-on Mobile Systems for Computational Social Science (co-located with ACM Ubicomp 2015).&nbsp;<a href="http://dl.acm.org/authorize?N19626">PDF</a></li>
-            <li><strong>Jayarajah, K.</strong>,  A. Misra, X. W. Ruan, E. P. Lim. Event Detection: Exploiting Socio-Physical
-Interactions in Physical Spaces, IEEE/ACM ASONAM 2015.</li>
-<li>Nayak, S., A. Misra, <strong>K. Jayarajah</strong>, P. K. Prasetyo, E. Lim. Exploring Discriminative Features for
-Anomaly Detection in Public Spaces, SPIE DSS 2015.</li>
-            <li>Sen, R., Y. Lee, <strong>K. Jayarajah</strong>, A. Misra and R. K. Balan. GruMon: Fast and Accurate Group
-Monitoring for Heterogeneous Urban Spaces, ACM SenSys 2014.&nbsp;<a href="http://dl.acm.org/authorize?N19627">PDF</a></li>
-            <li>Misra, A., <strong>K. Jayarajah</strong>, S. Nayak, P. K. Prasetyo and E. Lim. Socio-Physical Analytics: Challenges
-and Opportunities. 1st Workshop on Physical Analytics colocated with ACM MobiSys 2014.&nbsp;<a href="http://dl.acm.org/authorize?N19628">PDF</a></li>
-            <li>Liu, S., S. Wang, <strong>K. Jayarajah</strong>,  A. Misra and R. Krishnan. 2013. TODMIS: Mining communities
-from trajectories, ACM CIKM 2013.&nbsp;<a href="http://dl.acm.org/authorize?N19629">PDF</a></li>
-            <li>Khan, A.J., <strong>K. Jayarajah</strong>, D. Han, A. Misra, R. K. Balan and S. Seshan. CAMEO: a middleware
-for mobile advertisement delivery, ACM MobiSys 2013.&nbsp;<a href="http://dl.acm.org/authorize?N19620">PDF</a></li>
-        </ul>
-    </div>
+                        <p class="alert" style="background-color:#FFBF00; width:100%; text-align:center;">
+                            I'll be joining the Dept. of CS at New Jersey Institute of Technology as an Assistant Professor in Fall'23! I have multiple fully funded PhD positions, drop me a note if you're interested in mobile/wearable computing, IoT and autonomous systems!
+                        </p>
+                        
+                        <p class="lead">
+                        I'm a Research Assistant Professor at the University of Maryland Baltimore County, affiliated with the Center for Real-time Distributed Sensing and Autonomy (CARDS). My core research interests lie in the areas of mobile and ubiquitous sensing, deep learning for IoT and the edge, mobility-driven urban analytics and predictive cyber-physical systems.
+                        
+                        </p>
+                        <p>
+                        In my most recent work, I’m exploring the concept of "Collaborative AI-based sense-making" for resource-limited edge devices (e.g., infrastructural cameras, autonomous systems, wearable computers, etc.) where groups of sensors, due to their proximity and shared perspectives of the sensed environment, can cooperate for performance benefits. Previously, I explored the use of localization technology in improving the operations of built environments, both at the indoor-scale and city scale. I have worked on a variety of predictive urban applications (e.g., predicting non-conformant behavior, mobility-on-demand simulations/public transportation, consumer marketing and retail survivability), building on both social and behavioral insights derived from individual and group mobility.</p>
+                        
+                        
+                        <!-- <p><a href="bio.html" class="btn-sm btn-primary">Biography &raquo;</a>
+                        <a href="cv.html" class="btn-sm btn-primary">CV (Web)&raquo;</a>
+                        <a href="zeinalipour.pdf" class="btn-sm btn-primary">CV (PDF)&raquo;</a></p> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
 
-    <div id="awards" class="tiles" style="height:275px">
-        <h1>Awards/Honors</h1>
+        
+        <!-- News Section -->
+<!--         <section name="news" id="news">
+            
+            <div class="container lead">
+                <div style="text-align: left; margin-top:10px" class="col-md-12">
+                    
+                    <b class="noshow" style="display:none;" id="tab-8">
+                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-advising-content').toggle();">News  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    </b>
+                    <div class="allshow" style="display:none;" id="tab-news-content">
+                        
+                        <hr class="star-primary">
+                        <h2>NEWS</h2>
+                        <div style="overflow-y: scroll; height:200px">
+                    <table style="padding:2px">
+                <tr style="height:4em"><td>12/2022</td><td class="news">Our paper "AirDrop: Towards Collaborative, Multi-Resolution Air–Ground Teaming for Terrain-Aware Navigation" was accepted at ACM HotMobile'23!</td></tr>
+                <tr style="height:4em"><td>08/2022</td><td class="news">Our vision for <a href="https://arxiv.org/pdf/2208.05410.pdf">highly interactive, attention-sharing human-drone teams</a> will be presented at SmartWear co-located with ACM MobiCom'22!</td></tr>
+                <tr style="height:4em"><td>05/2022</td><td class="news">Happy to mentor the MRC-ARL Summer Student Team Research on <a href="https://cpb-us-e1.wpmucdn.com/blog.umd.edu/dist/d/961/files/2021/06/ARLSummerResearchExperienceFlyer2022-1.pdf">"Air-deploying Legged Robots"</a> along with Sean Gart (ARL), at UMBC this summer!</td></tr>
+                <tr style="height:4em"><td>12/2021</td><td class="news">Our work on retrofitting vision DNNs to enable lightweight collaborative intelligence has been accepted to IEEE INFOCOM'22!</td></tr>
+                <tr style="height:4em"><td>11/2021</td><td class="news">I've joined UMBC as a research faculty.</td></tr>
+                <tr style="height:4em"><td>10/2021</td><td class="news">I'll be serving on the MobiSys'22 Program Committee. Please consider submitting your work (Deadline 20th Dec)!</td></tr>
+                <tr style="height:4em"><td>02/2021</td><td class="news">I'll be speaking at the Voices of Data Science conference organized by UMass, Amherst. Join us <a href="https://live.remo.co/e/voices-of-data-science-2021-day--2/register">here!</a></td></tr>
+                <tr style="height:4em"><td>01/2021</td><td class="news">I'll be serving as a Student Volunteer Co-Chair for UbiComp'21 and Web Co-Chair for MobiSys'21!</td></tr>
+                        <tr style="height:4em"><td>12/2020</td><td class="news">Our paper titled "The Role of Group Cohesiveness in Targeted Mobile Promotions" has been accepted to the <b><a href="https://www.journals.elsevier.com/journal-of-business-research">Journal of Business Research</a></b> (Special Issue on Mobile Applications)!</td></tr>
+                <tr style="height:4em"><td>10/2020</td><td class="news">I've been selected to participate in the <a href="https://www2.eecs.berkeley.edu/risingstars/2020/participants/jayarajah.shtml"><b>EECS Rising Stars</b></a> Early Career Workshop, hosted by UCBerkely, this year!</td></tr>
+                    <tr style="height:4em"><td>07/2020</td><td class="news">I'm teaching COR1305 Spreadsheet Modeling and Analytics (formerly, Computer as an Analysis Tool) this Fall!</td></tr>
+                    <tr style="height:4em"><td>01/2020</td><td class="news">I'll be on leave till 06/20 (baby on the way!).</td></tr>
+                        <tr style="height:4em"><td>12/2019</td><td class="news">Our paper titled ""Five Challenges in Cloud-Enabled Intelligence and Control" was accepted to the ACM Trans. on Internet Technology.</td></tr>
+                        <tr style="height:4em"><td>09/2019</td><td class="news">I was named a Finalist for the Gaetano Borrielo Outstanding Student Award at UbiComp'19.</td></tr>
+                        <tr style="height:4em"><td>06/2019</td><td class="news">Our paper titled "Inferring Accurate Bus Trajectories from Noisy Estimated Arrival Time Records" was accepted to IEEE ITSC 2019.</td></tr>
+                        <tr style="height:4em"><td>05/2019</td><td class="news">Our paper titled "Resilient Collaborative Intelligence for Adversarial IoT Environments" was accepted to FUSION 2019.</td></tr>
+                        <tr style="height:4em"><td>02/2019</td><td class="news">Our paper titled "BuSCOPE : Fusing Individual & Aggregated Mobility Behaviorfor "Live" Smart City Services" was accepted to MobiSys 2019.</td></tr>
+                        <tr style="height:4em"><td>10/2018</td><td class="news">Our paper titled "Predicting Episodes of Non-Conformant Mobility in Indoor Environments" was accepted to IMWUT, Vol.2, Issue 4, 2018.</td></tr>
+                        <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "Exploiting the Interdependency of Land Use and Mobility for Urban Planning" was accepted to the 7th International Workshop on Pervasive Urban Applications (PURBA), co-located with UbiComp'18.</td></tr>
+                        <tr style="height:4em"><td>08/2018</td><td class="news">Our paper titled "The Role of Urban Mobility on Retail Business Survival" was accepted to IMWUT, Vol.2, Issue 3, 2018.</td></tr>
+                        <tr style="height:4em"><td>07/2018</td><td class="news">I've been awarded the SMU Multidisciplinary Doctoral Fellowship for the academic year 2018-2019.</td></tr>
+                        <tr style="height:4em"><td>10/2017</td><td class="news">We are one of the top 5 teams in the <a href="http://cikm2017.org/CIKM_AnalytiCup_details.html">DataSpark Open Task Mobility Challenge Finals of the CIKM AnalytiCup </a>!.</td></tr>
+                        <tr style="height:4em"><td>08/2017</td><td class="news"><a href="http://www.talks.cam.ac.uk/talk/index/74571">Invited to talk</a> at the Computer Laboratory of the University of Cambridge on the topic of "Understanding Urban Events with CrowdSourced Data".</td></tr>
+                        
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Won the <b><a href="https://www.womentechmakers.com/scholars">Google Women Techmakers Scholarship</a></b>.</td></tr>
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Attending the <a href="https://www.turing.ac.uk/events/urban-analytics-data-dive/">Urban Analytics Data Dive</a> at the Alan Turing Institute in London.</td></tr>
+                        <tr style="height:4em"><td>07/2017</td><td class="news">Our working paper titled "Role of Group Cohesiveness in Consumers' Responses to Mobile Promotions" was accepted to the Association of Consumer Research Conference, 2017.</td></tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">Our proposal on leveraging multi-modal sensors for city-scale event detection is through to the Semi Finals at the <b><a href="http://www.cikm2017.org/CIKM_AnalytiCup_task2.html">CIKM AnalytiCup 2017 - Mobility Challenge</a></b>!</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">I've been invited to the TPC of the ACM S3 Workshop. <a href="http://mnslab.org/s3/">Consider submitting!</a></td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2017</td><td class="news">I'm spending this Summer at the Computer Laboratory in University of Cambridge.</td>
+                        </tr>
+                        <tr style="height:4em"><td>08/2016</td><td class="news">I'm spending this Fall at CMU's Human-Computer Interaction Institute.</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Can Instagram Posts Help Characterize Urban Micro-Events?" was accepted to FUSION 2016.</td>
+                        </tr>
+                        <tr style="height:4em"><td>05/2016</td><td class="news">Our paper titled "Fusing WiFi and Video Sensing for Accurate Group Detection in Indoor Spaces" was accepted to the 3rd Intl' Workshop on Physical Analytics (co-located with MobiSys 2016).</td>
+                        </tr>
+                        <tr style="height:4em"><td>03/2016</td><td class="news">Our paper titled "LiveLabs: Building In-Situ Mobile Sensing & Behavioural Experimentation TestBeds" was accepted to MobiSys 2016.</td>
+                        </tr>
+                        <tr style="height:4em"><td>03/2016</td><td class="news">We are organizing the first ever <a href="http://www.sigmobile.org/mobisys/2016/workshops/women/">Women's Workshop</a> at MobiSys'16!</td>
+                        </tr>
 
-        <ul>
-		<li>Selected as a <a href="https://www2.eecs.berkeley.edu/risingstars/2020/participants/jayarajah.shtml"><b>EECS Rising Star</b></a> by UC Berkeley, 2020.</li>
-            <li><a href=""><b>Finalist, Gaetano Borrielo Outstanding Student Award, UbiComp 2019.</b></a></li>
-	    <li><a href=""><b>Best Paper Award, PURBA Workshop, co-located with UbiComp 2018.</b></a></li>
-            <li><a href="https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-multidisciplinary-doctoral-fellowships"><b>SMU Multi-Disciplinary Doctoral Fellowship, 2018.</b></a></li>
-            <li><b>Honorable Mention Award + Travel Grant</b>, ACM CIKM Analyticup Finals, 2017. <a href="./images/cikm-analyticup.jpg">An image of the team receiving the award.</a></li>
-            <li><b>Google Women Techmaker Scholar</b>, APAC, 2017. <!--<a href="./images/google-wtm.jpg">An image of the cohort from the scholars' retreat held at Seoul, Korea in the Google Korea Office.</a>--></li>
-            <li><b>Travel grant</b>, to attend the Urban Data Dive organized by the <a href="https://www.turing.ac.uk/">Alan Turing Institute </a>, UK, 2017.</li>
+                    </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- <div class="twitterlow" style="display:none;" id="t1">
+            < News Section >
+            <section  name="news"  id="news">
+                <div class="container lead">
+                    <div style="text-align: left; margin-top:10px" class="col-md-12">
+                        
+                        <b class="noshow" style="display:none;" id="tab-2">
+                            <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-news-content').toggle();">News  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                        </b>
+                        <b class="allshow" style="display:none;" id="tab-news-content">
+                            
+                            <hr class="star-primary">
+                            
+                            <h2>News</h2>
+                            <center><a class="twitter-timeline" href="https://twitter.com/dmslucy" data-chrome="nofooter" data-widget-id="346662554203992065">Tweets
+                                by @dmslcy</a>
+                            <script>!function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");
+                            </script>
+                            </center>
+                        </b>
+                    </div>
+                </div>
+            </section>
+        </div> -->
+        
+        <!-- Research Section -->
+        <section  name="publications" id="publications">
+            <div class="container lead">
+                <div style="text-align: left; margin-top:10px" class="col-md-12">
+                    
+                    <b class="noshow" style="display:none;" id="tab-3">
+                        <button class="btn btn-default btn-lg btn-block" style="display: block; width: 100%;" onclick="javascript:$('#tab-publications-content').toggle();">Publications  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    </b>
+                    <div class="allshow" style="display:none;" id="tab-publications-content">
+                        <hr class="star-primary">
+                        
+                        <h2>Selected Publications <a href="https://scholar.google.com.sg/citations?user=ArOh3LwAAAAJ&hl=en" class="btn btn-primary">All Publications&raquo;</a></h2>
+                        <!-- <h4>
+                            <span class="label label-warning">
+                                <a target="_blank" href="https://en.wikipedia.org/wiki/H-index"><font color=white>h-index</font></a>: 25
+                            </span>&nbsp;
+                            <span class="label label-warning">
+                                <a target="_blank" href="https://scholar.google.com/citations?user=HCxwGIkAAAAJ&hl=en"><font color=white>Citations</font></a>: 2867
+                            </span>&nbsp;
+                            <span class="label label-warning">
+                                <a target="_blank" href="https://en.wikipedia.org/wiki/Erd&ouml;s_number"><font color="white">Erd&ouml;s #</font></a>: 3
+                            </span>&nbsp;
+                            <span class="label label-default">
+                                <a target="_blank" href="https://orcid.org/0000-0002-7239-2387"><font color="white">ORCID</font></a>
+                            </span>&nbsp;
+                            <span class="label label-default">
+                                <a target="_blank" href="https://www.scopus.com/authid/detail.uri?authorId=35176841800"><font color="white">Scopus</font></a>
+                            </span>&nbsp;
+                            <span class="label label-default">
+                                <a target="_blank" href="https://www.researcherid.com/rid/O-2301-2016"><font color="white">ResearcherID</font></a>
+                            </span>
+                            
+                            
+                        </h4> -->
+                        <ul>
+                            <!-- <li><span class="label label-success">IEEE ICDE'19</span> <a target="_blank" href="#">"Bridging Quantities in Tables and Text"</a>,Yusra Ibrahim, Mirek Riedewald, Gerhard Weikum and Demetrios Zeinalipour-Yazti, Proceedings of the <b>35th IEEE International Conference on Data Engineering (ICDE'19)</b>, IEEE Computer Society, Macau SAR, China, 8-12 April 2019. <font color="red">(accepted!)</font></li>
+                            </li> -->
+                            <li><span class="label label-success">ACM HotMobile'23</span> <b>Kasthuri Jayarajah</b>, Sean Gart, Aryya Gangopadhyay, "AirDrop: Towards Collaborative, Multi-Resolution Air-Ground Teaming for Terrain-Aware Navigation", Proceedings of the 24th International Workshop on Mobile Computing Systems and Applications.<a href="https://dl.acm.org/doi/10.1145/3572864.3580335"> PDF</a></li>
+                          <li><span class="label label-success">MobiCom Workshops'22</span> <b>Kasthuri Jayarajah</b>, Aryya Gangopadhyay, Nicholas Waytowich, "TagTeam: Towards Wearable-Assisted, Implicit Guidance for Human–Drone Teams", SmartWear Workshop co-located with ACM MobiCom'22.<a href="https://arxiv.org/pdf/2208.05410.pdf"> Preprint</a></li>
+                            <li><span class="label label-success">IEEE INFOCOM'22</span> <b>Kasthuri Jayarajah</b>, Dhanuja Wanniarachchige, Tarek Abdelzaher, Archan Misra, "ComAI: Enabling Lightweight Collaborative Intelligence by Retrofitting Vision DNNs", IEEE INFOCOM 2022.</li>
+                         <li><span class="label label-success">JBR'21</span> Reetika Gupta, Sourjo Mukherjee, <b>Kasthuri Jayarajah</b>, "The Role of Group Cohesiveness in Targeted Mobile Promotions",Journal of Business Research, Volume 127, April 2021, Pages 216-227. <a href="https://www.sciencedirect.com/science/article/pii/S0148296321000382?dgcid=author">PDF</a></li>
+                                 <li><span class="label label-success">ACM TOIT'20</span> Tarek Abdelzaher, Yifan Hao, <b>Kasthuri Jayarajah</b>, Archan Misra, Per Skarin, Shuochao Yao, Dulanga Weerakoon, Karl-Erik Årzen, "Five Challenges in Cloud-Enabled Intelligence and Control," Trans. on Internet Technology, Vol. 3, Issue 1, February 2020.</li>
+                                <li><span class="label label-success">ACM MobiSys'19</span> L. Meegahapola, T. Kandappu, <strong>K. Jayarajah</strong>, L. Akoglu, S. Xiang and A. Misra. BuSCOPE : Fusing Individual & Aggregated Mobility Behaviorfor "Live" Smart City Services, ACM MobiSys 2019.&nbsp;<a href="https://dl.acm.org/authorize?N680927">PDF</a></li>
+                                <li><span class="label label-success">IMWUT/UbiComp'19</span> <strong>K. Jayarajah</strong> and A. Misra. Predicting Episodes of Non-Conformant Mobility in Indoor Environments, PACM IMWUT, Volume 2, Issue 4, Dec 2018. To be presented at UbiComp'19.&nbsp;<a href="https://dl.acm.org/authorize?N680928">PDF</a></li>
+                                <li><span class="label label-success">IMWUT/UbiComp'18</span> K. D'Silva, <strong>K. Jayarajah (co-primary)</strong>, A. Tassos, A. Misra, and C. Mascolo. The Role of Urban Mobility on Retail Business Survival, PACM IMWUT, Volume 2, Issue 3, 2018. Presented at UbiComp'18.&nbsp;<a href="https://dl.acm.org/authorize?N669563">PDF</a></li>
+                                <li><span class="label label-success">UbiComp'18/PURBA</span> <strong>Jayarajah, K.</strong>, A. Tan, and A. Misra. Exploiting the Interdependency of Land Use and Mobility for Urban Planning, 7th International Workshop on Pervasive Urban Applications (PURBA), UbiComp'18 Adjunct Proceedings.&nbsp;<a href="https://cpemis.eng.cmu.ac.th/~santi/purba2018/papers/purba-008.pdf">PDF</a>&nbsp;<b style="color:white;background-color:green;font-size:small">&nbsp;Best Paper&nbsp;</b></li>
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> <strong>Jayarajah, K.</strong>, V. Subbaraju, A. Athaide,  L. Meegahapola and A. Misra. Can multimodal sensing detect and localize transient events?, SPIE Defense+Security 2018.</li>
+                               <li><span class="label label-success">IEEE ICDE'19</span> Gupta, R., S. Mukherjee and <strong>K. Jayarajah</strong>. Role of Group Cohesiveness in Consumers' Responses to Mobile Promotions [Working Paper], Association For Consumer Research Conference North America Advances (2017).</li> -->
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> <strong>Jayarajah, K.</strong>, V. Subbaraju, D. Weerakoon, A. Misra, L. T. Tam and N. Athaide. Discovering anomalous events from urban informatics data, SPIE Defense+Security 2017.</li> -->
+                                <li><span class="label label-success">IFIP FUSION'16</span> <strong>Jayarajah, K.</strong> and A. Misra. Can Instagram Posts Help Characterize Urban Micro-Events?, The 19th International Conference on Information Fusion (FUSION 2016).</li>
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> <strong>Jayarajah, K.</strong>, Z. Lantra and A. Misra. Fusing WiFi and Video Sensing for Accurate Group Detection in Indoor Spaces, Third Intl' Workshop on Physical Analytics (co-located with ACM MobiSys 2016).&nbsp;<a href="http://dl.acm.org/authorize?N19612">PDF</a></li> -->
+                                <li><span class="label label-success">ACM MobiSys'16</span> <strong>Jayarajah, K.</strong>, R. K. Balan., M. Radhakrishnan, A. Misra and Y. Lee. LiveLabs: Enabling In-Situ
+                    Behavioural Experiments, ACM MobiSys 2016.&nbsp;<a href="http://dl.acm.org/authorize?N19613">PDF</a></li>
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> Misra, A., Z. Lantra and <strong>K. Jayarajah</strong>. Ontology-aided Feature Correlation for Multi-Modal Urban
+                    Sensing, SPIE Defense+Security 2016.</li> -->
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> Dai, B. T., <strong>K. Jayarajah</strong>, E. P. Lim, A. Misra, S. Nayak. A Study on Singapore Haze. 1st
+                    International Workshop on Understanding Situations Through Multimodal Sensing (co-located with
+                    ICDCN), 2016.&nbsp;<a href="http://dl.acm.org/authorize?N19625">PDF</a></li> -->
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> <strong>Jayarajah, K.</strong>, S. Yao, R. Mutharaju, A. Misra, G. De Mel, J. Skipper, T. Abdelzaher, M. Kolodny.
+                    Social Signal Processing for Real-Time Situational Understanding: A Vision and Approach. SocialSens
+                    Workshop co-located with IEEE MASS, 2015.</li> -->
+                                <li><span class="label label-success">ACM UbiComp'15</span> <strong>Jayarajah, K.</strong>, Y. Lee, A. Misra, R. K. Balan. Need Accurate User Behavior? Pay Attention to
+                                Groups!, ACM Ubicomp 2015.&nbsp;<a href="http://dl.acm.org/authorize?N19614">PDF</a></li>
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> <strong>Jayarajah, K.</strong>, M. Radhakrishnan, C. S. Hoi, A. Misra. Candy Crushing Your Sleep, 4th Workshop
+                    on Mobile Systems for Computational Social Science (co-located with ACM Ubicomp 2015).&nbsp;<a href="http://dl.acm.org/authorize?N19626">PDF</a></li> -->
+                                <li><span class="label label-success">ACM/IEEE ASONAM'15</span> <strong>Jayarajah, K.</strong>,  A. Misra, X. W. Ruan, E. P. Lim. Event Detection: Exploiting Socio-Physical
+                    Interactions in Physical Spaces, IEEE/ACM ASONAM 2015.</li>
+                               <!--  <li>Nayak, S., A. Misra, <strong>K. Jayarajah</strong>, P. K. Prasetyo, E. Lim. Exploring Discriminative Features for
+                                Anomaly Detection in Public Spaces, SPIE DSS 2015.</li> -->
+                                <li><span class="label label-success">ACM SenSys'14</span> Sen, R., Y. Lee, <strong>K. Jayarajah</strong>, A. Misra and R. K. Balan. GruMon: Fast and Accurate Group
+                    Monitoring for Heterogeneous Urban Spaces, ACM SenSys 2014.&nbsp;<a href="http://dl.acm.org/authorize?N19627">PDF</a></li>
+                                <!-- <li><span class="label label-success">IEEE ICDE'19</span> Misra, A., <strong>K. Jayarajah</strong>, S. Nayak, P. K. Prasetyo and E. Lim. Socio-Physical Analytics: Challenges
+                    and Opportunities. 1st Workshop on Physical Analytics colocated with ACM MobiSys 2014.&nbsp;<a href="http://dl.acm.org/authorize?N19628">PDF</a></li> -->
+                                <li><span class="label label-success">ACM CIKM'13</span> Liu, S., S. Wang, <strong>K. Jayarajah</strong>,  A. Misra and R. Krishnan. 2013. TODMIS: Mining communities
+                    from trajectories, ACM CIKM 2013.&nbsp;<a href="http://dl.acm.org/authorize?N19629">PDF</a></li>
+                                <li><span class="label label-success">ACM MobiSys'13</span> Khan, A.J., <strong>K. Jayarajah</strong>, D. Han, A. Misra, R. K. Balan and S. Seshan. CAMEO: a middleware
+                    for mobile advertisement delivery, ACM MobiSys 2013.&nbsp;<a href="http://dl.acm.org/authorize?N19620">PDF</a></li>
+                                </ul>
+                        <p><a href="https://scholar.google.com.sg/citations?user=ArOh3LwAAAAJ&hl=en" class="btn btn-primary">All Publications &raquo;</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    
+ 
+         <!-- Courses Section -->
+         <section  name="awards" id="awards">
+             <div class="container lead">
+                 <div style="text-align: left; margin-top:10px" class="col-md-12">
+                     
+                     <b class="noshow" style="display:none;" id="tab-6">
+                         <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-awards-content').toggle();">Awards  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                     </b>
+                     <div class="allshow" style="display:none;" id="tab-awards-content">
+                         
+                         <hr class="star-primary">
+                         <h2>Awards/Honors</h2>
+                          <!-- <a href="cv.html#SECTION00040000000000000000" class="btn btn-primary">More &raquo;</a> -->
+                         <ul>
+                            <li>Selected as a <a href="https://www2.eecs.berkeley.edu/risingstars/2020/participants/jayarajah.shtml"><b>EECS Rising Star</b></a> by UC Berkeley, 2020.</li>
+                                <li><b>Finalist, Gaetano Borrielo Outstanding Student Award, UbiComp 2019.</b></li>
+                            <li><b>Best Paper Award, PURBA Workshop, co-located with UbiComp 2018.</b></li>
+                                <li><a href="https://graduatestudies.smu.edu.sg/phd/singapore-management-university-smu-multidisciplinary-doctoral-fellowships"><b>SMU Multi-Disciplinary Doctoral Fellowship, 2018.</b></a></li>
+                                <li><b>Honorable Mention Award + Travel Grant</b>, ACM CIKM Analyticup Finals, 2017. <a href="./images/cikm-analyticup.jpg">An image of the team receiving the award.</a></li>
+                                <li><b>Google Women Techmaker Scholar</b>, APAC, 2017. <!--<a href="./images/google-wtm.jpg">An image of the cohort from the scholars' retreat held at Seoul, Korea in the Google Korea Office.</a>--></li>
+                                <li><b>Travel grant</b>, to attend the Urban Data Dive organized by the <a href="https://www.turing.ac.uk/">Alan Turing Institute </a>, UK, 2017.</li>
 
-        </ul>
-
-    </div>
-
-    <div id="services" class="tiles" style="height:520px">
-        <h1>Positions Held/Services</h1>
-
-        <table>
-        <tr ><td width=160>Reviewer</td><td style="text-align:left">IMWUT (2017 to 2021 [<b>Special Recognition for Outstanding Review X 1</b>])</td>
-            </tr>
-	    <tr ><td width=160></td><td style="text-align:left">ACM CSCW (2019 to 2021)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">ACM Transactions on Internet Technologies (TOIT) (2020-2021)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">AAAI ICWSM (2020-2021)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">ACM Transactions on Spatial Algorithms and Systems (2021)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">Journal of Consumer Marketing (2021)</td>
-            </tr>
-	    <tr ><td width=160></td><td style="text-align:left">ACM MobileCHI (2020)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">Elsevier Pervasive and Mobile Computing (PMC) (2020)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">Springer Social Network Analysis and Mining (SNAM) (2020)</td>
-            </tr>
-            <tr ><td width=160></td><td style="text-align:left">ACM UIST (2019)</td>
-            </tr>
-            <tr ><td width=160></td><td style="text-align:left">ISWC (2019)</td>
-            </tr>
-            <tr ><td width=160></td><td style="text-align:left">CHI Late Breaking Work (2019)</td>
-            </tr>
-            <tr ><td width=160></td><td style="text-align:left">IEEE Transactions on Mobile Computing (2016)</td>
-            </tr>
-            <tr ><td width=160>TPC</td><td style="text-align:left">ACM IoTDI (2020) </td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">ACM MobiSys PhD Forum (2018)</td>
-            </tr>
-		<tr ><td width=160></td><td style="text-align:left">ACM S3 Workshop (2017)</td>
-            </tr>
-            <tr ><td width=160>Board Member</td><td style="text-align:left">Networking Networking Women (2015, 2016)</td>
-            </tr>
-            <tr><td width=160>Web Director</td><td style="text-align:left">ACM SIGMOBILE (2017-)</td>
-            </tr>
-            <tr><td width=160>Organizing Co-Chair</td><td style="text-align:left">1st MobiSys Women's Workshop (2016) </td>
-            </tr>
-            <tr><td width=160>Organizing Committee</td><td style="text-align:left">UbiComp (2018, Student Volunteers Co-Chair and Web Co-Chair), MobiSys (2016, Web Co-Chair), ICDCN (2016, Webchair), Intl' Workshop on Physical Analytics (2014, Webchair), Fourth ACM Workshop on Mobile Systems for Computational Social Science (2015, Webchair) </td>
-            </tr>
-            <tr><td width=160>Student Volunteer</td><td style="text-align:left">CIKM (2017), MobiSys/ASSET (2016), BCSI (2014) </td>
-            </tr>
-            <!--<tr><td>Events I've Helped Organize</td><td></td><td></td><td></td><td></td>
-            </tr>-->
-
-        </table>
-
-    </div>
-
-    <div id="affiliations" class="tiles" style="height:250px">
-        <h1>AFFILIATIONS</h1>
-
-        <table>
-
-            <tr><td>Places I've Studied At</td><td><a href="http://www.smu.edu.sg"><img src="./images/smu.png" height=50/></a></td><td><a href="http://www.cmu.edu"><img src="./images/CMU.png" height=50/></a></td><td><a href="http://www.nus.edu.sg"><img src="./images/nus.png" height=50/></a></td><td><a href="http://www.mrt.ac.lk"><img src="./images/uom.png" height=50/></a></td><td></td>
-            </tr>
-            <tr><td>People I've Worked With</td><td><a href="http://www.cl.cam.ac.uk/"><img src="./images/uni-of-camb-computer-lab.png" height=40/></a></td><td><a href="http://www.arl.army.mil/www/default.cfm"><img src="./images/arl.png" height=40/></a></td><td><a href="http://centres.smu.edu.sg/larc/"><img src="./images/larc.png" height=50/></a></td><td><a href="http://cutecenter.nus.edu.sg/"><img src="./images/nuskeio.png" height=50/></a></td><td><a href="http://www.virtusa.com/"><img src="./images/virtusa.png" height=50/></a></td><td><a href="http://www.huawei.com/en/"><img src="./images/huawei.png" height=50/></a></td><td></td>
-            </tr>
-            <tr><td>Causes I Care About</td><td><a href="https://www.sigmobile.org/"><img src="./images/sigmobile.jpg" width=50/></a></td><td><a href="http://n2women.comsoc.org/"><img src="./images/n2women.png" width=150/></a></td><td></td><td></td><td></td>
-            </tr>
-            <!--<tr><td>Events I've Helped Organize</td><td></td><td></td><td></td><td></td>
-            </tr>-->
-
-        </table>
-    </div>
-
-    <div class="footer">
-        <p>Last Updated: 20 June 2020<br>
-        kasthurij@smu.edu.sg</p>
-        <center>
-        <a href="https://clustrmaps.com/site/1891r" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=VUWLQYN-8z0oYqj4kff3ylkSXI8zBAMbwdF_BTlVTbc&cl=ffffff"></a>
-        </center>
-        <!--<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&d=VUWLQYN-8z0oYqj4kff3ylkSXI8zBAMbwdF_BTlVTbc"></script>-->
-    </div>
+                            </ul>
+                        <!--  <ul>
+                             <li>
+                                 <span class="label label-success">IEEE MDM'18</span> <a target="_blank" href="https://mdmconferences.org/mdm2018/">Best of MDM 2018</a>,  ``Decaying Telco Big Data with Data Postdiction'', 19th IEEE International Conference on Mobile Data Management (MDM'18), Aalborg, Denmark, June 26 - June 28, 2018 (Geinformatica - Springer - journal invitation).</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">IEEE MDM'18</span> <a target="_blank" href="https://mdmconferences.org/mdm2018/">Best Demo Award</a>,  ``FMS: Managing Crowdsourced Indoor Signals with the Fingerprint Management Studio'', 19th IEEE International Conference on Mobile Data Management (MDM'18), Aalborg, Denmark, June 26 - June 28, 2018.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">IEEE MDM'17</span> <a target="_blank" href="https://mdmconferences.org/mdm2017/">Honorable Mention Award</a>,  ``Indoor Localization Accuracy Estimation from Fingerprint Data'', 18th IEEE International Conference on Mobile Data Management (MDM'17), KAIST, Daejeon, South Korea, May 29 - June 1, 2017.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">ACM DSP'17</span> <a target="_blank" href="https://dsp.acm.org/view_lecturer.cfm?lecturer_id=7903">ACM Distinguished Speaker</a>, Association for Computing Machinery, New York, NY, USA, 2017-2020.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">ACM SENIOR'16</span> <a target="_blank" href="https://awards.acm.org/award_winners/zeinalipour_1835156.cfm">ACM Senior Member</a>, Association for Computing Machinery, New York, NY, USA, 2016.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">IEEE SENIOR'16</span> <a target="_blank" href="https://www.ieee.org/membership_services/membership/senior/index.html">IEEE Senior Member</a>, Institute of Electrical and Electronics Engineers, Piscataway, NJ, USA, 2016.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">HUMBOLDT'16</span> <a target="_blank" href="https://www.humboldt-foundation.de/web/home.html">Humboldt Fellow</a>, Alexander von Humboldt Foundation, Bonn, Germany, 2016.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">EVARILOS'14</span> <a target="_blank" href="http://www.evarilos.eu/open-challenge.php">Best Demo Award</a>, EVARILOS Open Challenge, FP7 Project (#317989), European Union, Berlin, Germany, 2014.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">ACM/IEEE IPSN'14</span> <a target="_blank" href="https://research.microsoft.com/en-us/events/ipsn2014indoorlocalizatinocompetition/">2nd Best Demo Award</a>, Microsoft Indoor Localization Competition 2014, collocated with 13th ACM/IEEE International Conference on Information Processing in Sensor Networks (IPSN'14), April 15-17, Berlin, Germany, 2014.</span>
+                             </li>
+                             <li>
+                                 <span class="label label-success">APPCAMPUS'13</span> <a target="_blank" href="https://blogs.windows.com/bloggingwindows/2013/11/11/5-top-apps-from-the-appcampus-program-for-windows-phone/">Appcampus Award</a>, ``Rayzit: Crowd Messaging'', Microsoft, Nokia and Aalto University, Finland, 2013.</span>
+                             </li>
+                             
+                             <li>
+                                 <span class="label label-success">IEEE MDM'12</span> <a target="_blank" href="https://mdmconferences.org/mdm2012/">Best Demo Award</a>,  ``The Airplace Indoor Positioning Platform for Android Smartphones'', 13th IEEE International Conference on Mobile Data Management (MDM'12), Bangalore, India, July 23-26, 2012.</span>
+                             </li>
+                             
+                             <li>
+                                 <span class="label label-success">COREGRID'06</span> <a target="_blank" href="https://mdmconferences.org/mdm2012/">Best Demo Award</a>, ``ICGrid: Intensive Care Grid'', CoreGRID Industrial Conference, Sophia Antipolis, France, Nov. 2006.</span>
+                             </li>
+                         </ul> -->
+                     </div>
+                 </div>
+             </div>
+         </section>
 
 
-</body>
+        
+        
+        
+        <!-- Service Section -->
+        <section name="service" id="service">
+            
+            <div class="container lead">
+                <div style="text-align: left; margin-top:10px" class="col-md-12">
+                    
+                    <b class="noshow" style="display:none;" id="tab-7">
+                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-service-content').toggle();">Service  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    </b>
+                    <div class="allshow" style="display:none;" id="tab-service-content">
+                        
+                        <hr class="star-primary">
+                        <h2>Professional Service</h2>
+                        
 
-<link type="text/css" href="css/main.css" rel="stylesheet" />
-<script type="text/javascript" src="Scripts/jquery-1.6.1.min.js"></script>
-<script type="text/javascript" src="Scripts/jquery.metadata.js"></script>
+                    <table>
+                        <tr ><td width=160>TPC</td><td style="text-align:left">IEEE IWQoS (2023) </td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM MobiSys (2022) </td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">IEEE ICDCN (2022) </td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM IoTDI (2020) </td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM MobiSys PhD Forum (2018)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM S3 Workshop (2017)</td>
+                            </tr>
+
+                        <tr ><td width=160>Reviewer</td><td style="text-align:left">IMWUT (2017 to 2022 [<b>Special Recognition for Outstanding Review X 1</b>])</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">AAAI ICWSM (2020-2023)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM CSCW (2019 to 2021)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM Transactions on Internet Technologies (TOIT) (2020-2022)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM Transactions on Spatial Algorithms and Systems (2021)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">Journal of Consumer Marketing (2021)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">ACM MobileCHI (2020)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">Elsevier Pervasive and Mobile Computing (PMC) (2020, 2022)</td>
+                            </tr>
+                        <tr ><td width=160></td><td style="text-align:left">Springer Social Network Analysis and Mining (SNAM) (2020)</td>
+                            </tr>
+                            <tr ><td width=160></td><td style="text-align:left">ACM UIST (2019)</td>
+                            </tr>
+                            <tr ><td width=160></td><td style="text-align:left">ISWC (2019)</td>
+                            </tr>
+                            <tr ><td width=160></td><td style="text-align:left">CHI Late Breaking Work (2019)</td>
+                            </tr>
+                            <tr ><td width=160></td><td style="text-align:left">IEEE Transactions on Mobile Computing (2016)</td>
+                            </tr>
+                            
+                            <tr ><td width=160>Board Member</td><td style="text-align:left">Networking Networking Women (2015, 2016)</td>
+                            </tr>
+                            <tr><td width=160>Web Director</td><td style="text-align:left">ACM SIGMOBILE (2017-)</td>
+                            </tr>
+                            <tr><td width=160>Organizing Co-Chair</td><td style="text-align:left">1st MobiSys Women's Workshop (2016) </td>
+                            </tr>
+                            <tr><td width=160>Organizing Committee</td><td style="text-align:left">ACM/IEEE IoTDI (2023, Web Chair), UbiComp (2021, SV Co-Chair), UbiComp (2018, Student Volunteers Co-Chair and Web Co-Chair), MobiSys (2016, Web Co-Chair), ICDCN (2016, Webchair), Intl' Workshop on Physical Analytics (2014, Webchair), Fourth ACM Workshop on Mobile Systems for Computational Social Science (2015, Webchair) </td>
+                            </tr>
+                            <tr><td width=160>Student Volunteer</td><td style="text-align:left">CIKM (2017), MobiSys/ASSET (2016), BCSI (2014) </td>
+                            </tr>
+                            <!--<tr><td>Events I've Helped Organize</td><td></td><td></td><td></td><td></td>
+                            </tr>-->
+
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Advising Section -->
+        <section name="advising" id="advising">
+            
+            <div class="container lead">
+                <div style="text-align: left; margin-top:10px" class="col-md-12">
+                    
+                    <b class="noshow" style="display:none;" id="tab-8">
+                        <button class="btn btn-default btn-lg btn-block"  style="display: block; width: 100%;" onclick="javascript:$('#tab-advising-content').toggle();">Advising  <span class="glyphicon glyphicon-chevron-down"></span></button>
+                    </b>
+                    <div class="allshow" style="display:none;" id="tab-service-content">
+                        
+                        <hr class="star-primary">
+                        <h2>Students</h2>
+                        <h3>PhD Students</h3>
+                        <ul>
+                            <li>Pretom Ovi (Dissertation Proposal Committee Member)</li>
+                            <li>Indrajeet Ghosh (w/ Nirmalya Roy, "Wearable-assisted Cueing for Improving Working Memory Recall", 2022-current)</li>
+                            <li>Md. Saied Anwar (w/ Nirmalya Roy, "Addressing Asymmetry in Heterogeneous, Collaborative Networks", 2022-current)</li>
+                            <li>Saisree Chukkapalli (w/ Anupam Joshi, "Reasoning and Truth Maintenance for Resilience in Collaborative Networks", 2022-current)</li>
+                        </ul>
+
+
+
+                        <h3>Undergraduate Students (Current)</h3>
+                        <ul>
+                            <li>Kevin Rippy, UMBC/CSEE'24, 2022-current</li>
+                            <li>Warren Funk, UMBC/CSEE'23, 2023-current</li>
+                            <li>Luther Daigle, UMBC/ME'24, 2022-current</li>
+                            <li>Ben Polyakov, UMBC/CSEE'23, 2023-current</li>
+                            <li>Hong Nguyen, UMBC/CSEE'25, 2023-current</li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <hr class="star-primary">
+        <footer>
+            <small>
+                <center>
+                    © 2022 | K. Jayarajah. Credits: AR template
+                    <a onclick="javascript:$('#credit').toggle();"><img border="0" src="images/ccby.png"/></a>
+                    <div style="display:none;" id="credit">[AR template available under Creative Commons CC BY 4.0 licence:
+                        <a href="https://github.com/dmsl/academic-responsive-template" target="_blank">
+                            https://github.com/dmsl/academic-responsive-template
+                        </a> ]
+                    </div><br>
+
+                    <a href="https://clustrmaps.com/site/1891r" title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=VUWLQYN-8z0oYqj4kff3ylkSXI8zBAMbwdF_BTlVTbc&cl=ffffff"></a>
+        
+                </center>
+            </small>
+        </footer>
+        
+    </body>
+    <!-- <script type="text/javascript" src="Scripts/jquery-1.6.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="Scripts/jquery.metadata.js"></script> -->
 
 </html>
