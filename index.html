@@ -12,6 +12,29 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet"/>
         <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+
+        <style>
+            #recent-work { color-scheme: light dark; --rw-bg:light-dark(#fff,#1c2428); --rw-text:light-dark(#182c30,#edf5f4); --rw-muted:light-dark(#53676a,#b4c6c8); --rw-line:light-dark(#dce6e5,#3c5054); --rw-accent:light-dark(#17665e,#8cdbca); font-family:Arial,sans-serif; color:var(--rw-text); padding:20px 0; }
+            #recent-work * { box-sizing:border-box; }
+            #recent-work .rw-shell {background:var(--rw-bg); padding:clamp(18px,4vw,36px); border:1px solid var(--rw-line); border-radius:18px;}
+            #recent-work .rw-eyebrow {font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--rw-accent); font-weight:700; margin:0 0 12px;}
+            #recent-work h2 {font-size:clamp(24px,4vw,34px); letter-spacing:-1px; margin:0 0 24px; font-weight:500;}
+            #recent-work .rw-slide {display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(20px,4vw,40px); align-items:center;}
+            #recent-work .rw-slide[hidden] {display:none;}
+            #recent-work img {width:100%; aspect-ratio:4/3; object-fit:cover; display:block; border-radius:10px; background:#dcece7;}
+            #recent-work .rw-meta {font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--rw-accent); margin:0 0 12px;}
+            #recent-work h3 {font-size:clamp(22px,3vw,30px); line-height:1.15; font-weight:500; margin:0 0 16px; letter-spacing:-.6px;}
+            #recent-work .rw-description {font-size:15px; line-height:1.7; color:var(--rw-muted); margin:0;}
+            #recent-work .rw-controls {display:flex; align-items:center; justify-content:space-between; gap:12px; border-top:1px solid var(--rw-line); margin-top:26px; padding-top:16px;}
+            #recent-work .rw-dots,#recent-work .rw-arrows {display:flex; align-items:center; gap:4px;}
+            #recent-work button {font:inherit; color:var(--rw-text); background:transparent; border:1px solid var(--rw-line); border-radius:50%; width:44px; height:44px;}
+            #recent-work button:hover {background:light-dark(#edf5f2,#30433e);}
+            #recent-work .rw-dot {border:0; width:32px; border-radius:6px;}
+            #recent-work .rw-dot::after {content:''; display:block; width:7px; height:7px; border-radius:50%; background:var(--rw-muted); opacity:.4; margin:auto;}
+            #recent-work .rw-dot[aria-pressed="true"]::after {background:var(--rw-accent); opacity:1; width:20px; border-radius:5px;}
+            #recent-work .rw-count {color:var(--rw-muted); font-size:12px; font-variant-numeric:tabular-nums; margin-right:12px;}
+            @media(max-width:560px) {#recent-work .rw-slide {grid-template-columns:1fr;} #recent-work img {aspect-ratio:16/10;} }
+            </style>
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -404,6 +427,41 @@
                 </div>
             </section>
         </div> -->
+
+        <section id="recent-work" class="viz-dotted-background" aria-label="Recent projects and events" aria-roledescription="carousel">
+ <div class="rw-shell">
+  <!-- <p class="rw-eyebrow">From the lab</p> -->
+  <h2>Recent Projects &amp; Events</h2>
+  <div class="rw-slides" aria-live="polite" aria-atomic="true">
+   <!-- Replace each image src with your own photo path, e.g. images/project-1.jpg. -->
+   <article class="rw-slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+    <img src="images/combined-concord-v1.gif" alt="Abstract green landscape placeholder for a research project" width="300" height="300" object-fit: contain;>
+    <div><p class="rw-meta">ConCord: Toward Human–Robot Cooperative Search (ACM MobiSys'26)</p><p class="rw-description">How can robots complement the way people search? ConCord explores how wearable sensing can give robots insight into human attention and search behavior. By connecting gaze, head, and hand movements with robotic systems, we lay the groundwork for teammates that recognize what people have explored and where assistance may be needed. Our prototype spans simulated and real-world search environments, taking a step toward more adaptive human–robot collaboration.</p></div>
+   </article>
+   <article class="rw-slide" role="group" aria-roledescription="slide" aria-label="2 of 3" hidden>
+    <img src="images/combined-iros.gif" alt="Abstract terracotta landscape placeholder for a community event" width="300" height="300" object-fit: contain;>
+    <div><p class="rw-meta">Fluency in Gesture-based Teleoperation (IEEE/RSJ IROS'24, IROS'26)</p><p class="rw-description">We explore how hand gestures can enable intuitive mobile robot teleoperation. Our real-time system translates hand movements captured by a head-mounted device into robot motion commands through various gesture schemes that offer different tradeoffs between precision and intuitiveness. User studies show that gesture-based control performs comparably to traditional interfaces, even when participants perceive their performance differently. Extending this work, we infer operator fluency from motion smoothness and hand-joint features to predict task completion time and corrective actions with high accuracy. </p></div>
+   </article>
+   <article class="rw-slide" role="group" aria-roledescription="slide" aria-label="3 of 3" hidden>
+    <img src="images/steercam.gif" alt="Abstract blue landscape placeholder for a student showcase" width="300" height="300">
+    <!-- <video autoplay loop muted playsinline
+       style="width: 300px; height: 300px; object-fit: contain;">
+      <source src="./images/steercam.mp4" type="video/mp4">
+    </video> -->
+    <div><p class="rw-meta">Collabrative Perception at the Edge (ACM SenSys'26 and IEEE INFOCOM'26)</p><p class="rw-description">Networked camera systems increasingly process video at the edge to reduce communication and energy overheads, but lightweight, edge-friendly models face an undesirable complexity–accuracy tradeoff. SteerCam jointly adapts camera viewing angles and selective sharing of hints between inference pipelines, improving detection as objects move through the monitored space. FusionBridge extends collaborative perception to static RGB cameras and mobile LiDAR-equipped robots, using compact, class-aware hints to overcome challenges such as occlusion and poor lighting. </p></div>
+    <!-- Together, these systems enhance on-device perception through coordinated sensing and lightweight collaboration. -->
+   </article>
+  </div>
+  <div class="rw-controls">
+   <div class="rw-dots" aria-label="Choose a slide">
+    <button class="rw-dot cursor-interaction" type="button" aria-label="Show research project" aria-pressed="true"></button>
+    <button class="rw-dot cursor-interaction" type="button" aria-label="Show community event" aria-pressed="false"></button>
+    <button class="rw-dot cursor-interaction" type="button" aria-label="Show student showcase" aria-pressed="false"></button>
+   </div>
+   <div class="rw-arrows"><span class="rw-count">01 / 03</span><button class="rw-prev cursor-interaction" type="button" aria-label="Previous slide">&#8592;</button><button class="rw-next cursor-interaction" type="button" aria-label="Next slide">&#8594;</button></div>
+  </div>
+ </div>
+</section>
         
         <!-- Research Section -->
         <section  name="publications" id="publications">
@@ -743,5 +801,70 @@ Mobile Ad-Hoc and Smart Systems.<a href="https://arxiv.org/pdf/2305.03252.pdf"> 
     </body>
     <!-- <script type="text/javascript" src="Scripts/jquery-1.6.1.min.js"></script> -->
     <!-- <script type="text/javascript" src="Scripts/jquery.metadata.js"></script> -->
+
+    <script>
+(() => {
+ const root = document.getElementById('recent-work');
+ const slides = [...root.querySelectorAll('.rw-slide')];
+ const dots = [...root.querySelectorAll('.rw-dot')];
+ let current = 0;
+ function show(index) {
+  current = (index + slides.length) % slides.length;
+  slides.forEach((slide, i) => { slide.hidden = i !== current; });
+  dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === current)));
+  root.querySelector('.rw-count').textContent = `${String(current + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+ }
+ root.querySelector('.rw-prev').addEventListener('click', () => show(current - 1));
+ root.querySelector('.rw-next').addEventListener('click', () => show(current + 1));
+ dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+ root.addEventListener('keydown', event => {
+  if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+   event.preventDefault(); show(current + (event.key === 'ArrowRight' ? 1 : -1));
+  }
+ });
+ // Self-contained placeholder images. Remove this block when adding your photos.
+ const palettes = [['#dcece7','#e7b85b','#6d9990','#245d55'],['#f3e2d3','#c56d42','#ce9b80','#804c46'],['#dfe7f1','#e7bb6f','#8dacc2','#3d627e']];
+ root.querySelectorAll('img[data-art]').forEach(img => {
+  const [sky,sun,back,front] = palettes[Number(img.dataset.art)];
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="${sky}"/><circle cx="595" cy="160" r="72" fill="${sun}"/><path d="M0 400L220 160L450 420L620 280L800 420V600H0Z" fill="${back}"/><path d="M0 490Q220 330 440 480T800 430V600H0Z" fill="${front}"/><text x="40" y="555" font-family="Arial" font-size="16" letter-spacing="3" fill="white">YOUR IMAGE HERE</text></svg>`;
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+ });
+
+
+let autoplay;
+
+function stopAutoplay() {
+  clearInterval(autoplay);
+}
+
+function startAutoplay() {
+  stopAutoplay();
+
+  // Respect reduced-motion preferences and pause during interaction.
+  if (
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    document.hidden ||
+    root.matches(':hover') ||
+    root.contains(document.activeElement)
+  ) return;
+
+  autoplay = setInterval(() => show(current + 1), 5000);
+}
+
+root.addEventListener('mouseenter', stopAutoplay);
+root.addEventListener('mouseleave', startAutoplay);
+root.addEventListener('focusin', stopAutoplay);
+root.addEventListener('focusout', () => {
+  setTimeout(startAutoplay, 0);
+});
+
+document.addEventListener('visibilitychange', startAutoplay);
+
+startAutoplay();
+
+
+
+})();
+</script>
 
 </html>
