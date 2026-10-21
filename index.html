@@ -16,12 +16,12 @@
         <style>
             #recent-work { color-scheme: light; --rw-bg:light-dark(#fff,#1c2428); --rw-text:light-dark(#182c30,#edf5f4); --rw-muted:light-dark(#53676a,#b4c6c8); --rw-accent:light-dark(#17665e,#8cdbca); font-family:Arial,sans-serif; color:var(--rw-text); padding:20px 0; }
             #recent-work * { box-sizing:border-box; }
-            #recent-work .rw-shell {background:var(--rw-bg); padding:clamp(18px,4vw,36px); border:1px solid var(--rw-line); border-radius:18px;}
+            #recent-work .rw-shell {background:var(--rw-bg); padding:clamp(8px,4vw,36px); border:1px solid var(--rw-line); border-radius:18px;}
             #recent-work .rw-eyebrow {font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--rw-accent); font-weight:700; margin:0 0 12px;}
             #recent-work h2 {font-size:clamp(24px,4vw,34px); letter-spacing:-1px; margin:0 0 24px; font-weight:500;}
             #recent-work .rw-slide {display:grid; grid-template-columns:1.1fr 1fr; gap:clamp(20px,4vw,40px); align-items:center;}
             #recent-work .rw-slide[hidden] {display:none;}
-            #recent-work img {width:100%; aspect-ratio:4/3; object-fit:cover; display:block; border-radius:10px; background:#dcece7;}
+            #recent-work img {width:100%; aspect-ratio:4/3; object-fit:contain; display:block; border-radius:10px; background:#dcece7;}
             #recent-work .rw-meta {font-size:12px; text-transform:uppercase; letter-spacing:1px; color:var(--rw-accent); margin:0 0 12px;}
             #recent-work h3 {font-size:clamp(22px,3vw,30px); line-height:1.15; font-weight:500; margin:0 0 16px; letter-spacing:-.6px;}
             #recent-work .rw-description {font-size:15px; line-height:1.7; color:var(--rw-muted); margin:0;}
@@ -326,8 +326,8 @@
                     
                 </div>
             </div>
-        <!-- </section> -->
-        <!-- <section id="recent-work" class="container lead" aria-label="Recent projects" aria-roledescription="carousel"> -->
+        </section>
+        <section id="recent-work" class="container lead" aria-label="Recent projects" aria-roledescription="carousel">
              <div id="recent-work" class="rw-shell">
               <!-- <p class="rw-eyebrow">From the lab</p> -->
               <h3>Recent Projects</h3>
